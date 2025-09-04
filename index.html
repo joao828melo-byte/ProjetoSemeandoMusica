@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Semeando Música</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .dark {
+            --tw-bg-opacity: 1;
+            background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+            color: white;
+        }
+        .dark .bg-white {
+            background-color: #1e293b !important;
+        }
+        .dark .text-gray-800 {
+            color: white !important;
+        }
+        .dark .border-gray-200 {
+            border-color: rgb(51 65 85) !important;
+        }
+        .dark .bg-gray-100 {
+            background-color: rgb(30 41 59) !important;
+        }
+        .dark .bg-blue-600 {
+            background-color: rgb(29 78 216) !important;
+        }
+        .dark .hover\:bg-blue-700:hover {
+            background-color: rgb(30 64 175) !important;
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300">
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-slate-800 shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- Logo Placeholder -->
+                <div class="w-12 h-12 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                    <img src="IMG/Logo editado.png" alt="Logo" class="w-10 h-10 object-contain" />
+                </div>
+                <span class="text-xl font-bold text-gray-800 dark:text-white">Projeto Semeando Música</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-blue-600 dark:text-blue-400 font-medium">Início</a>
+                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Sobre</a>
+                <a href="#teachers" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Professores</a>
+                <a href="#instruments" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Instrumentos</a>
+                <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contato</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-slate-700">
+                    <i data-feather="moon" class="hidden dark:block text-white"></i>
+                    <i data-feather="sun" class="dark:hidden text-gray-600"></i>
+                </button>
+                <button class="md:hidden p-2 rounded-full bg-gray-100 dark:bg-slate-700" id="mobile-menu-button">
+                    <i data-feather="menu" class="text-gray-600 dark:text-white"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white dark:bg-slate-800 shadow-lg" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="#" class="py-2 text-blue-600 dark:text-blue-400 font-medium">Início</a>
+                <a href="#about" class="py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Sobre</a>
+                <a href="#teachers" class="py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Professores</a>
+                <a href="#instruments" class="py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Instrumentos</a>
+                <a href="#contact" class="py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">Aprenda Música e Cresça na Fé</h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">O Projeto Semeando Música une o ensino musical de qualidade com valores cristãos, formando músicos talentosos e servos fiéis.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Matricule-se</a>
+                        <a href="#about" class="border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-3 rounded-lg font-medium transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="IMG/logo preto e dourado.jpg" alt="Aula de música" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Sobre o Projeto</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/people/640x360/2" alt="Equipe do projeto" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Missão e Visão</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">O Projeto Semeando Música nasceu com o propósito de ensinar música de qualidade enquanto semeamos valores cristãos em nossos alunos. Acreditamos que a música é uma poderosa ferramenta de adoração e evangelização.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Nossa visão é formar músicos competentes que usem seus talentos para glorificar a Deus e edificar a igreja, transformando vidas através da música e da Palavra.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                <i data-feather="music" class="text-blue-600 dark:text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 dark:text-white">Excelência Musical</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Métodos comprovados para desenvolver suas habilidades musicais</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                <i data-feather="heart" class="text-blue-600 dark:text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 dark:text-white">Formação Cristã</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Aprendizado baseado em princípios bíblicos e valores cristãos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                <i data-feather="users" class="text-blue-600 dark:text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 dark:text-white">Comunidade</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Faça parte de uma comunidade de músicos que compartilham sua fé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="py-16 bg-gray-100 dark:bg-slate-700">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Nossos Professores</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Teacher 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="IMG/rosenildo violão.jpg" alt="Ronildo Bernado" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-1">Ronildo Bernado</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">Professor Principal</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Violão, Guitarra e Baixo (Iniciantes)</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Fundador do projeto com mais de 15 anos de experiência em ensino musical e ministério de louvor.</p>
+                    </div>
+                </div>
+                <!-- Teacher 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="IMG/joão guitarrra.jpg" alt="João Vitor" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-1">João Vitor</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">Professor Avançado</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Violão, Guitarra e Baixo (Avançado)</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Especialista em técnicas avançadas e improvisação, com formação em música contemporânea.</p>
+                    </div>
+                </div>
+                <!-- Teacher 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="IMG/🎹❤️_🔥.webp.jpg" alt="Natanael" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-1">Natanael</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">Professor Avançado</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Teclado (Avançado)</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Pianista clássico e especialista em teclado gospel, com formação no conservatório.</p>
+                    </div>
+                </div>
+                <!-- Teacher 4 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <img src="http://static.photos/people/320x240/6" alt="Daniel" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-1">Daniel</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">Professor Avançado</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Bateria (Avançado)</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Baterista profissional com experiência em estúdio e grandes eventos gospel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instruments Section -->
+    <section id="instruments" class="py-16 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Instrumentos Ensinaods</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Violão -->
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Violão</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Do básico ao avançado, aprenda técnicas de dedilhado, acordes e solos.</p>
+                </div>
+                <!-- Guitarra -->
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Guitarra</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Domine a guitarra elétrica com técnicas de palhetada, bends e improvisação.</p>
+                </div>
+                <!-- Baixo -->
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Baixo</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Aprenda a fundamentar a harmonia com groove, slap e técnicas de dedo.</p>
+                </div>
+                <!-- Teclado -->
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Teclado</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Domine acordes, escalas e arranjos para teclado e piano gospel.</p>
+                </div>
+                <!-- Bateria -->
+                <div class="bg-gray-100 dark:bg-slate-700 rounded-lg p-6 text-center" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600 dark:text-blue-300 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Bateria</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Desenvolva ritmos, viradas e técnicas de pedal para bateria gospel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100 dark:bg-slate-700">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Informações</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-blue-600 dark:text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 dark:text-white">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Bernadorosenildo@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-blue-600 dark:text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 dark:text-white">Telefone</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">(21) 99481-5460</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-blue-600 dark:text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 dark:text-white">Localização</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Rua Alcerbíades 04, Rio de Janeiro - RJ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Redes Sociais</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="facebook" class="text-blue-600 dark:text-blue-300"></i>
+                                </a>
+                                <a href="https://www.instagram.com/projeto_semeando_musica" class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="instagram" class="text-blue-600 dark:text-blue-300"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@rosenildobernardo6338" class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="youtube" class="text-blue-600 dark:text-blue-300"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i data-feather="twitter" class="text-blue-600 dark:text-blue-300"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
+                    <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Formulário de Contato</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white">
+                            </div>
+                            <div class="mb-4">
+                                <label for="instrument" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Instrumento de Interesse</label>
+                                <select id="instrument" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white">
+                                    <option>Violão</option>
+                                    <option>Guitarra</option>
+                                    <option>Baixo</option>
+                                    <option>Teclado</option>
+                                    <option>Bateria</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white"></textarea>
+                            </div>
+                            <button type="submit" id="whatsapp-send" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium w-full transition duration-300">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-800 py-8 border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <!-- Logo Placeholder -->
+                    <div class="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                        <i data-feather="music" class="text-gray-600 dark:text-white"></i>
+                    </div>
+                    <span class="text-lg font-bold text-gray-800 dark:text-white">Projeto Semeando Música</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Termos</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Privacidade</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">FAQ</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2023 Projeto Semeando Música. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved user preference, if any
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+
+        document.getElementById('whatsapp-send').onclick = function() {
+    // Pegue os valores do formulário
+    const nome = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const instrumento = document.getElementById('instrument').value;
+    const mensagem = document.getElementById('message').value;
+
+    // Monte o texto para o WhatsApp
+    const texto = `Olá! Meu nome é ${nome}. Email: ${email}. Tenho interesse em ${instrumento}. Mensagem: ${mensagem}`;
+    
+    // Coloque o número do WhatsApp no formato internacional, exemplo: 5521994815460
+    const numero = '5521994815460';
+
+    // Crie a URL do WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    // Redirecione para a URL do WhatsApp
+    window.open(url, '_blank');
+};
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
